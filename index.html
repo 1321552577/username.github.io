@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>申子颖科三必过</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2019—07-3,</span><br />
+			<span class="space"/><span class="comments">*天气多云转晴</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			祝愿<span class="keyword">大美女</span>申子颖<br />
+			 <span class="keyword">科三必过</span><br />
+			 <br />
+			 <br />
+			<span class="comments"> </span>
+			一帆风顺去，马到成功日。<br />
+				<span class="comments">// All sails go smoothly until the day of success.</span><br />
+			（至） 高奏凯歌还，班师还朝时。<br />
+				<span class="comments">// The class teacher is still in good time.</span><br />
+			花经霜易凋，玉经雕成噐。<br /> 
+				<span class="comments">// Flower warp frost withers easily, and jade warp is carved.</span><br />
+			货无价为虚，人无信不立。<br />
+				<span class="comments">// Goods are priceless, and people believe in them.</span><br />
+			旷世村夫信口语，信口开河无人敌！<br />
+				<span class="comments">// Kwangshimura people believe in spoken language, letters open rivers unrivalled!</span><br />			
+			信马由缰任吾走，信手拈来不费力！<br />
+				<span class="comments">// It's easy to carry a horse by hand.</span><br />
+			<br>
+			<br>
+			我想说<br />
+			<span class="comments">// I want to say:</span><br />
+			科三加油!<br />
+			<span class="comments">// Kesan refueling</span><br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					 英才齐聚争鳌头,贾生才调更无伦。<br/>
+					 一举夺魁宏名扬,霞光裹身蔽云天 <br/>
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					申子颖科三必过<br/>
+					<div class="signature">- Sir Wu</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2018, 12, 15);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
